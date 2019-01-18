@@ -63,13 +63,14 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
             'laugh': 'crowd_laughter',
             'rejoice': 'much_rejoicing',
             'no': 'nope',
-            'yes': 'crowd_yes'
+            'yes': 'crowd_yes',
+            'rayne': 'sigh'
         }
 
         if action == 'alert':
-            self.alert_api(argv[1])
+            self.alert_api(' '.join(argv[1:]))
         elif action == 'group_alert':
-            self.group_alert_api((argv[1]))
+            self.group_alert_api(' '.join((argv[1:])))
         elif action == 'chat_reactions':
             clean_chat_reactions = str(list(chat_reactions.keys()))[1:-1].replace('\'', '')
             self.chat('Chat reations include: {}'.format(clean_chat_reactions))

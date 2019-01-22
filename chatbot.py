@@ -55,7 +55,7 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
         chat_reactions = {
             'golfclap': 'crowd_golf_clap',
             'clap': 'crowd_applause',
-            'cheer': 'party',
+            'cheer': 'crowd_cheers',
             'gasp': 'crowd_gasp',
             'boo': 'crowd_boo',
             'aww': 'crowd_awww',
@@ -64,7 +64,8 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
             'rejoice': 'much_rejoicing',
             'no': 'nope',
             'yes': 'crowd_yes',
-            'rayne': 'sigh'
+            'rayne': 'sigh',
+            'ganza': 'a_thousand_miles'
         }
 
         if action == 'alert':
